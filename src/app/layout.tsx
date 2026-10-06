@@ -21,15 +21,15 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alaika.dev';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: 'Alaika — Full Stack Developer & Creative Technologist',
+    default: 'Alaika — Data Scientist & AI Practitioner',
     template: '%s | Alaika',
   },
   description:
-    'Full Stack Engineer specializing in high-performance web systems, interactive canvas architectures, and luxury digital design. Based in Indonesia.',
+    'Data Scientist and AI practitioner specializing in machine learning, generative AI, and applied analytics. Informatics student at Universitas Bhamada Slawi, based in Tegal, Indonesia.',
   openGraph: {
-    title: 'Alaika — Full Stack Developer & Creative Technologist',
+    title: 'Alaika — Data Scientist & AI Practitioner',
     description:
-      'Full Stack Engineer specializing in high-performance web systems, interactive canvas architectures, and luxury digital design. Based in Indonesia.',
+      'Data Scientist and AI practitioner specializing in machine learning, generative AI, and applied analytics. Informatics student at Universitas Bhamada Slawi, based in Tegal, Indonesia.',
     type: 'website',
     locale: 'en_US',
     url: SITE_URL,
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Alaika — Full Stack Developer & Creative Technologist',
+    title: 'Alaika — Data Scientist & AI Practitioner',
     description:
-      'Full Stack Engineer specializing in high-performance web systems, interactive canvas architectures, and luxury digital design. Based in Indonesia.',
+      'Data Scientist and AI practitioner specializing in machine learning, generative AI, and applied analytics. Informatics student at Universitas Bhamada Slawi, based in Tegal, Indonesia.',
   },
   robots: {
     index: true,
@@ -54,23 +54,23 @@ const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Alaika',
-  jobTitle: 'Full Stack Developer',
+  jobTitle: 'Data Scientist & AI Practitioner',
   url: SITE_URL,
   sameAs: [
     'https://github.com/Alaika10',
     'https://www.linkedin.com/in/alaika',
   ],
   knowsAbout: [
-    'JavaScript',
-    'TypeScript',
-    'React',
-    'Next.js',
-    'Node.js',
-    'Canvas API',
-    'WebGL',
-    'Framer Motion',
     'Python',
-    'PostgreSQL',
+    'Machine Learning',
+    'Data Science',
+    'Generative AI',
+    'Pandas',
+    'Scikit-learn',
+    'SQL',
+    'Computer Vision',
+    'Jupyter',
+    'Next.js',
   ],
   address: {
     '@type': 'PostalAddress',
@@ -84,7 +84,7 @@ const websiteSchema = {
   name: 'Alaika',
   url: SITE_URL,
   description:
-    'Full Stack Engineer specializing in high-performance web systems, interactive canvas architectures, and luxury digital design. Based in Indonesia.',
+    'Data Scientist and AI practitioner specializing in machine learning, generative AI, and applied analytics. Based in Tegal, Indonesia.',
 };
 
 export default function RootLayout({

@@ -62,7 +62,7 @@ export default function FooterSection() {
           <div className="footer-brand">
             <span className="footer-logo">Alaika</span>
             <p className="footer-tagline">
-              Full Stack Engineer crafting zero-latency web experiences &amp; distributed systems from Indonesia.
+              Data Scientist &amp; AI practitioner building models, analyses, and intelligent products from Tegal, Indonesia.
             </p>
           </div>
 

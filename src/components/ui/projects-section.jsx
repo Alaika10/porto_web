@@ -6,37 +6,37 @@ import { ArrowUpRight } from 'lucide-react';
 
 const PROJECTS = [
   {
-    id: 'aura-canvas',
+    id: 'strukly-ai',
     num: '01',
-    title: 'Aura Canvas Tracking Engine',
-    category: 'Creative Web',
-    description: 'Mathematically rigorous 360° circular trajectory mapping with angular shortest-path lerping and seamless WebP frame rendering at 60fps with zero alpha ghosting.',
-    tech: ['WebGL', 'Canvas API', 'React', 'TypeScript'],
-    metric: '60 FPS · 0ms lag',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop',
-    url: '#',
+    title: 'Strukly AI for UMKM',
+    category: 'Applied AI',
+    description: 'AI platform for digitizing receipts, managing transactions, and generating automated insights for small businesses — connecting vision, structured data, and practical UMKM workflows.',
+    tech: ['Python', 'Computer Vision', 'NLP', 'Analytics'],
+    metric: 'Receipt AI · UMKM',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=800&auto=format&fit=crop',
+    url: 'https://github.com/Alaika10/strukly_AI_UMKM',
   },
   {
-    id: 'vortex-cloud',
+    id: 'beijing-air',
     num: '02',
-    title: 'Vortex Cloud Event Mesh',
-    category: 'Distributed Systems',
-    description: 'Distributed event-driven infrastructure processing 10M+ events/day with dynamic backpressure, geo-replicated clusters, and zero-downtime rolling deployments.',
-    tech: ['Go', 'gRPC', 'Redis', 'Kubernetes'],
-    metric: '10M+ events/day · <10ms p99',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop',
-    url: '#',
+    title: 'Beijing Air Quality Analysis',
+    category: 'Data Science',
+    description: 'Exploratory analysis of Beijing air-quality records: cleaning, trend discovery, and visual storytelling to explain pollution patterns across time and stations.',
+    tech: ['Python', 'Pandas', 'EDA', 'Visualization'],
+    metric: 'EDA · Time series',
+    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop',
+    url: 'https://github.com/Alaika10/Analisis_udara_Beijing_project',
   },
   {
-    id: 'synapse-ai',
+    id: 'cancer-prediction',
     num: '03',
-    title: 'Synapse AI Multimodal Studio',
-    category: 'AI & Tools',
-    description: 'Visual node-based canvas for orchestrating multi-step LLM workflows with real-time token streaming via SSE and autonomous vision tool execution.',
-    tech: ['Next.js', 'FastAPI', 'Python', 'OpenAI'],
-    metric: 'Realtime SSE · Multi-agent',
-    image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=800&auto=format&fit=crop',
-    url: '#',
+    title: 'Breast Cancer Prediction',
+    category: 'Machine Learning',
+    description: 'Classification pipeline using logistic regression to predict breast-cancer outcomes, with model evaluation and a reproducible Linux-friendly experiment workflow.',
+    tech: ['Scikit-learn', 'Logistic Regression', 'Jupyter', 'Linux'],
+    metric: 'Classification · Eval',
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop',
+    url: 'https://github.com/Alaika10/Breach-Cancer-prediction',
   },
 ];
 
@@ -58,7 +58,7 @@ export function ProjectsSection() {
           <span className="about-eyebrow">Selected Works</span>
           <h2 className="about-title">
             Crafted with<br />
-            <em>precision & purpose</em>
+            <em>data & intelligence</em>
           </h2>
         </motion.div>
 

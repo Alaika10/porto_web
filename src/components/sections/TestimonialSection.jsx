@@ -11,7 +11,7 @@ export default function TestimonialSection() {
         <FadeInUp className="testimonial-header">
           <span className="about-eyebrow">Testimonials</span>
           <h2 className="about-title">
-            What clients<br />
+            What collaborators<br />
             <em>say about the work</em>
           </h2>
         </FadeInUp>

@@ -17,13 +17,13 @@ export default function TimelineDemo(props) {
     <div className="w-full">
       <Timeline
         title="Experience & Career Journey"
-        periodLabel="2020 — 2026"
+        periodLabel="2023 — 2026"
         backgroundColor={s.backgroundColor}
         textColor={s.textColor}
         mutedTextColor={s.mutedTextColor}
         activeColor={s.activeColor}
-        imageUrl="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop"
-        imageAlt="Alaika Developer Workspace and Engineering"
+        imageUrl="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+        imageAlt="Alaika data science workspace and machine learning experiments"
         duration={s.duration}
       />
     </div>

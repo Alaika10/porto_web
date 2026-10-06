@@ -93,55 +93,55 @@ function usePrefersReducedMotion() {
 
 const defaultTopJourneyData = [
   {
-    id: "2020-march",
-    year: "2020",
-    month: "March",
-    content: "Started architectural exploration in WebGL and high-throughput canvas engines",
-  },
-  {
-    id: "2021-july",
-    year: "2021",
-    month: "July",
-    content: "Shipped real-time collaborative platform with sub-10ms event streams",
-  },
-  {
-    id: "2023-april",
+    id: "2023-march",
     year: "2023",
+    month: "March",
+    content: "Started Informatics studies and first public experiments in Python and data analysis",
+  },
+  {
+    id: "2024-july",
+    year: "2024",
+    month: "July",
+    content: "Shipped exploratory analyses and classification notebooks, including air-quality work",
+  },
+  {
+    id: "2025-april",
+    year: "2025",
     month: "April",
-    content: "Architected distributed cloud systems handling 10M+ daily events",
+    content: "Contributed to Strukly AI for UMKM — receipt intelligence and applied analytics",
   },
   {
     id: "2026-may",
     year: "2026",
     month: "May",
-    content: "Pioneering zero-latency interactive web apps and AI-driven computer vision pipelines",
+    content: "Deepening generative AI, computer vision, and machine learning engineering practice",
   },
 ];
 
 const defaultBottomJourneyData = [
   {
-    id: "2020-november",
-    year: "2020",
+    id: "2023-november",
+    year: "2023",
     month: "November",
-    content: "Built foundational microservices & high-concurrency Node/Go APIs",
+    content: "Built foundational SQL, statistics, and Jupyter workflows for coursework",
   },
   {
-    id: "2022-october",
-    year: "2022",
+    id: "2024-october",
+    year: "2024",
     month: "October",
-    content: "Lead frontend engineer for luxury digital experiences & award-winning sites",
+    content: "Published healthcare classification experiments with logistic regression",
   },
   {
     id: "2025-september",
     year: "2025",
     month: "September",
-    content: "Integrated lightweight on-device vision models & multi-platform design systems",
+    content: "Explored body-language decoding with vision models and DataLabs dashboards",
   },
 ];
 
 export default function Timeline({
   title = "Career & Experience Journey",
-  periodLabel = "2020 — 2026",
+  periodLabel = "2023 — 2026",
   textColor = "#111418",
   mutedTextColor = "#52525b",
   activeColor = "#111418",
@@ -309,7 +309,7 @@ export default function Timeline({
             />
           </div>
           <div className="p-3">
-            <h3 className="text-xl font-bold text-neutral-900 leading-tight mb-1">Alaika Studio</h3>
+            <h3 className="text-xl font-bold text-neutral-900 leading-tight mb-1">Alaika · Data & AI</h3>
             <p className="text-xs text-neutral-500 font-mono">Scroll right to explore career timeline &rarr;</p>
           </div>
         </div>

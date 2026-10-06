@@ -198,11 +198,11 @@ const CSS = `
 
 export function IDCardLanyard({
   name = "Alaika",
-  role = "Full Stack Developer",
+  role = "Data Scientist & AI",
   brand = "ALAIKA",
-  brandTagline = "Full Stack Dev Studio",
-  pillars = ["Design", "Code", "Ship"],
-  location = "Indonesia",
+  brandTagline = "Data Science Studio",
+  pillars = ["Data", "Model", "Insight"],
+  location = "Tegal, ID",
   idNumber = "AL-2024",
   validThru = "12/2029",
   site = "alaika.dev/work",

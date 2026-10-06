@@ -3,7 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
-export function WavePath({ className, color = 'currentColor', strokeWidth = 3, ...props }) {
+export function WavePath({ className, color = 'currentColor', strokeWidth = 3, compact = false, ...props }) {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
   const progressRef = useRef(0);
@@ -11,7 +11,7 @@ export function WavePath({ className, color = 'currentColor', strokeWidth = 3, .
   const timeRef = useRef(Math.PI / 2);
   const reqIdRef = useRef(null);
 
-  const Y_MID = 250;
+  const Y_MID = compact ? 120 : 250;
 
   const getWidth = () =>
     containerRef.current ? containerRef.current.offsetWidth : window.innerWidth;
@@ -36,7 +36,7 @@ export function WavePath({ className, color = 'currentColor', strokeWidth = 3, .
       window.removeEventListener('resize', handleResize);
       if (reqIdRef.current) cancelAnimationFrame(reqIdRef.current);
     };
-  }, []);
+  }, [compact]);
 
   const lerp = (a, b, t) => a * (1 - t) + b * t;
 
@@ -76,16 +76,18 @@ export function WavePath({ className, color = 'currentColor', strokeWidth = 3, .
   };
 
   return (
-    <div ref={containerRef} className={cn('relative w-full', className)} {...props}>
+    <div
+      ref={containerRef}
+      className={cn('wave-path', compact && 'wave-path--compact', className)}
+      {...props}
+    >
       <div
         onMouseEnter={manageMouseEnter}
         onMouseMove={manageMouseMove}
         onMouseLeave={manageMouseLeave}
-        style={{ position: 'absolute', left: 0, right: 0, top: '-60px', height: '120px', cursor: 'crosshair', zIndex: 10 }}
+        className="wave-path-hit"
       />
-      <svg
-        style={{ position: 'absolute', width: '100%', height: '700px', top: '-350px', pointerEvents: 'none', overflow: 'visible' }}
-      >
+      <svg className="wave-path-svg" aria-hidden="true">
         <path
           ref={pathRef}
           fill="none"

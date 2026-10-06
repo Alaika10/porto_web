@@ -1,8 +1,7 @@
 'use client';
-"use client";
 
-import { motion } from 'motion/react';
 import { FadeInUp } from '@/components/ui/fade-in-up';
+import WaveDividerQuote from '@/components/sections/WaveDividerQuote';
 
 export default function ExperienceSection() {
   return (
@@ -16,84 +15,90 @@ export default function ExperienceSection() {
             Career &amp; <br />
             <em>Milestones</em>
           </h2>
-          <p className="experience-period">2020 — 2026</p>
+          <p className="experience-period">2023 — 2026</p>
         </FadeInUp>
 
-        <div className="experience-grid">
+        <div className="experience-list">
 
-          <FadeInUp delay={0.08} className="experience-card experience-card--featured">
-            <div className="experience-card-inner">
-              <div className="experience-meta">
-                <span className="experience-year">2024 – Now</span>
-                <span className="experience-badge">Current</span>
-              </div>
-              <h3 className="experience-role">Senior Full Stack Engineer</h3>
-              <p className="experience-company">Independent / Freelance</p>
-              <p className="experience-desc">
-                Building high-performance interactive web experiences and consulting on cloud architecture for scale-up companies. Specialising in zero-latency canvas engines and luxury digital interfaces.
-              </p>
-              <div className="experience-tags">
-                <span>React</span><span>WebGL</span><span>AWS</span><span>Go</span>
-              </div>
+          <FadeInUp delay={0.08} className="experience-row">
+            <div className="experience-row-meta">
+              <span className="experience-year">2024 – Now</span>
+              <span className="experience-badge">Current</span>
             </div>
+            <article className="experience-card experience-card--featured">
+              <div className="experience-card-inner">
+                <h3 className="experience-role">Data Scientist &amp; AI Practitioner</h3>
+                <p className="experience-company">Independent / Applied Projects</p>
+                <p className="experience-desc">
+                  Building applied machine learning and generative AI systems — from UMKM receipt intelligence to predictive models and analytics dashboards that surface clear insight from real-world data.
+                </p>
+                <div className="experience-tags">
+                  <span>Python</span><span>ML</span><span>GenAI</span><span>Pandas</span>
+                </div>
+              </div>
+            </article>
           </FadeInUp>
 
-          <FadeInUp delay={0.14} className="experience-card">
-            <div className="experience-card-inner">
-              <div className="experience-meta">
-                <span className="experience-year">2021 – 2024</span>
-              </div>
-              <h3 className="experience-role">Lead Engineer</h3>
-              <p className="experience-company">Vortex Systems</p>
-              <p className="experience-desc">
-                Led a team of 8 engineers building distributed event-driven infrastructure processing 10M+ events/day with sub-10ms latency. Scaled backend from monolith to microservices.
-              </p>
-              <div className="experience-tags">
-                <span>Node.js</span><span>Kafka</span><span>Kubernetes</span><span>PostgreSQL</span>
-              </div>
+          <FadeInUp delay={0.14} className="experience-row">
+            <div className="experience-row-meta">
+              <span className="experience-year">2024 – 2025</span>
             </div>
+            <article className="experience-card">
+              <div className="experience-card-inner">
+                <h3 className="experience-role">AI Product Contributor</h3>
+                <p className="experience-company">Strukly AI UMKM</p>
+                <p className="experience-desc">
+                  Contributed to an AI platform for receipt digitization, transaction management, and automated analysis for small businesses — connecting computer vision, structured data, and practical UMKM workflows.
+                </p>
+                <div className="experience-tags">
+                  <span>Python</span><span>Computer Vision</span><span>NLP</span><span>UMKM</span>
+                </div>
+              </div>
+            </article>
           </FadeInUp>
 
-          <FadeInUp delay={0.20} className="experience-card">
-            <div className="experience-card-inner">
-              <div className="experience-meta">
-                <span className="experience-year">2018 – 2021</span>
+          <FadeInUp delay={0.20} className="experience-row">
+            <div className="experience-row-meta">
+              <span className="experience-year">2023 – Now</span>
+            </div>
+            <article className="experience-card">
+              <div className="experience-card-inner">
+                <h3 className="experience-role">Informatics Student</h3>
+                <p className="experience-company">Universitas Bhamada Slawi</p>
+                <p className="experience-desc">
+                  Studying Informatics with a focus on data science and machine learning. Shipped analysis notebooks, classification models, and public experiments across air quality, healthcare prediction, and body-language decoding.
+                </p>
+                <div className="experience-tags">
+                  <span>Jupyter</span><span>Scikit-learn</span><span>EDA</span><span>SQL</span>
+                </div>
               </div>
-              <h3 className="experience-role">Full Stack Developer</h3>
-              <p className="experience-company">Nexlayer Studio</p>
-              <p className="experience-desc">
-                Developed real-time collaborative tools and WebGL-powered data visualisation platforms for enterprise clients. Built award-winning luxury digital experiences.
-              </p>
-              <div className="experience-tags">
-                <span>TypeScript</span><span>Next.js</span><span>WebGL</span><span>Redis</span>
-              </div>
-            </div>
+            </article>
           </FadeInUp>
-
-          {/* Stats column */}
-          <FadeInUp delay={0.1} className="experience-stats-col">
-            <div className="experience-stat-item">
-              <span className="experience-stat-num">8+</span>
-              <span className="experience-stat-label">Years building</span>
-            </div>
-            <div className="experience-divider" />
-            <div className="experience-stat-item">
-              <span className="experience-stat-num">3</span>
-              <span className="experience-stat-label">Companies led</span>
-            </div>
-            <div className="experience-divider" />
-            <div className="experience-stat-item">
-              <span className="experience-stat-num">10M+</span>
-              <span className="experience-stat-label">Events / day</span>
-            </div>
-            <div className="experience-divider" />
-            <div className="experience-stat-item">
-              <span className="experience-stat-num">50+</span>
-              <span className="experience-stat-label">Projects shipped</span>
-            </div>
-          </FadeInUp>
-
         </div>
+
+        <FadeInUp delay={0.12} className="experience-stats-col">
+          <div className="experience-stat-item">
+            <span className="experience-stat-num">3+</span>
+            <span className="experience-stat-label">Years exploring</span>
+          </div>
+          <div className="experience-divider" />
+          <div className="experience-stat-item">
+            <span className="experience-stat-num">18</span>
+            <span className="experience-stat-label">Public repos</span>
+          </div>
+          <div className="experience-divider" />
+          <div className="experience-stat-item">
+            <span className="experience-stat-num">6+</span>
+            <span className="experience-stat-label">ML / AI builds</span>
+          </div>
+          <div className="experience-divider" />
+          <div className="experience-stat-item">
+            <span className="experience-stat-num">Tegal</span>
+            <span className="experience-stat-label">Based in Indonesia</span>
+          </div>
+        </FadeInUp>
+
+        <WaveDividerQuote />
       </div>
     </section>
   );

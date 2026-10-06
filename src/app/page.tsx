@@ -9,7 +9,6 @@ import TestimonialSection from '@/components/sections/TestimonialSection';
 import ContactSection from '@/components/sections/ContactSection';
 import FooterSection from '@/components/sections/FooterSection';
 import { WavePath } from '@/components/ui/wave-path';
-import WaveDividerQuote from '@/components/sections/WaveDividerQuote';
 
 export default function Home() {
   return (
@@ -25,11 +24,8 @@ export default function Home() {
         {/* About */}
         <AboutSection />
 
-        {/* Experience */}
+        {/* Experience + quote line */}
         <ExperienceSection />
-
-        {/* Wave quote divider -- after Experience */}
-        <WaveDividerQuote />
 
         {/* Projects */}
         <ProjectsSection />

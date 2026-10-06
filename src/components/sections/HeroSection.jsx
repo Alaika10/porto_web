@@ -317,8 +317,8 @@ export default function HeroSection() {
           </div>
           <h1 className="name-heading">Alaika</h1>
           <p className="bio-text">
-            Full Stack Developer specializing in high-performance web systems,
-            interactive architectures, and luxury digital design. Crafting zero-latency experiences.
+            Data Scientist &amp; AI practitioner specializing in machine learning,
+            generative AI, and applied analytics. Turning data into intelligent products.
           </p>
           <div className="cta-group">
             <button
@@ -372,7 +372,7 @@ export default function HeroSection() {
               <div>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Let's Create Together</h3>
                 <p style={{ color: '#4b5563', fontSize: '0.92rem', marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                  Open for select engineering contracts, creative web builds, and technical leadership roles.
+                  Open for data science collaborations, machine learning projects, and applied AI work.
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginBottom: '1.5rem' }}>
                   <a href="mailto:alaika@example.com" className="btn-primary" style={{ justifyContent: 'flex-start', padding: '0.7rem 1.2rem' }}>
@@ -395,7 +395,7 @@ export default function HeroSection() {
               <div>
                 <h3 style={{ fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.5rem' }}>Professional Dossier</h3>
                 <p style={{ color: '#4b5563', fontSize: '0.92rem', marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                  Full curriculum vitae detailing experience with high-scale tech firms, open-source work, and patents.
+                  Curriculum vitae covering data science, machine learning, generative AI, and selected project work.
                 </p>
                 <a
                   href="/resume.pdf"

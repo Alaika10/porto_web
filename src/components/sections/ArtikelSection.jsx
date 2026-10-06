@@ -6,39 +6,39 @@ import { BlogPostCard } from '@/components/ui/card-18';
 import { FadeInUp } from '@/components/ui/fade-in-up';
 
 const featuredPost = {
-  tag: 'Web Dev',
+  tag: 'Machine Learning',
   date: 'JUL 2026',
-  title: 'Building Zero-Latency Interfaces: From Canvas to Production',
+  title: 'From Notebook to Decision: Evaluating Classification Models Honestly',
   description:
-    'A deep dive into how 60fps interactive character engines work under the hood — covering WebGL, canvas rendering pipelines, and the maths behind smooth gaze tracking.',
+    'A practical walkthrough of train/test splits, metrics that actually matter, and how I evaluate logistic regression pipelines on real healthcare-style datasets.',
   href: '#',
   imageUrl:
-    'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&auto=format&fit=crop&q=80',
+    'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&auto=format&fit=crop&q=80',
 };
 
 const artikelPosts = [
   {
-    tag: 'Architecture',
+    tag: 'Data Science',
     date: 'JUN 2026',
-    title: 'Distributed Event-Driven Systems at Scale',
+    title: 'Reading Beijing Air Quality: EDA That Tells a Story',
     description:
-      'How to design backend infrastructure that processes millions of events per day with sub-10ms response times using Go and Kafka.',
+      'How exploratory analysis, cleaning, and visualization turn a dense environmental dataset into patterns you can actually explain.',
     href: '#',
   },
   {
-    tag: 'Design',
+    tag: 'Generative AI',
     date: 'MAY 2026',
-    title: 'Luxury Digital Design: Principles Behind Premium Web Experiences',
+    title: 'Applied GenAI for Small Business Workflows',
     description:
-      'Breaking down the visual language, typography choices, and micro-animation patterns that separate luxury digital products from the rest.',
+      'Lessons from building AI around receipts and UMKM operations — where language models help, and where structured data still wins.',
     href: '#',
   },
   {
-    tag: 'Cloud',
+    tag: 'Computer Vision',
     date: 'APR 2026',
-    title: 'Terraform Patterns for Production-Grade Cloud Infrastructure',
+    title: 'Decoding Body Language with Vision Models',
     description:
-      'Practical patterns for managing multi-region AWS infrastructure as code — from state management to CI/CD pipeline integration.',
+      'Notes on pose signals, feature extraction, and the gap between a demo notebook and a system that behaves in the wild.',
     href: '#',
   },
 ];
@@ -63,7 +63,7 @@ export default function ArtikelSection() {
           <span className="about-eyebrow">Artikel</span>
           <h2 className="about-title">
             Thoughts on<br />
-            <em>engineering & craft</em>
+            <em>data, models &amp; AI</em>
           </h2>
         </FadeInUp>
 

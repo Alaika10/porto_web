@@ -26,10 +26,10 @@ export default function ContactSection() {
           <span className="about-eyebrow">Contact</span>
           <h2 className="about-title">
             Let's build<br />
-            <em>something great</em>
+            <em>something intelligent</em>
           </h2>
           <p className="contact-sub">
-            Open for select engineering contracts, creative web builds, and technical leadership roles. Response within 24 hours.
+            Open for internships, data science collaborations, and applied AI projects. Response within 24 hours.
           </p>
 
           <div className="contact-links">
@@ -101,7 +101,7 @@ export default function ContactSection() {
               <textarea
                 id="contact-message"
                 className="contact-input contact-textarea"
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your dataset, model, or AI idea..."
                 required
                 rows={5}
                 value={formState.message}

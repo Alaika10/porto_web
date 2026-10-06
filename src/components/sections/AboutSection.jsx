@@ -11,10 +11,10 @@ const IDCardLanyard = dynamic(
 import { FadeInUp } from '@/components/ui/fade-in-up';
 
 const skills = [
-  { category: 'Frontend', icon: Layers, items: ['React', 'TypeScript', 'Next.js', 'WebGL / Canvas', 'Tailwind CSS'] },
-  { category: 'Backend', icon: Zap, items: ['Node.js', 'Go', 'Python', 'PostgreSQL', 'Redis'] },
-  { category: 'Infrastructure', icon: Globe, items: ['AWS', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform'] },
-  { category: 'Craft', icon: Code2, items: ['Computer Vision', 'Real-time Systems', 'API Design', 'Performance'] },
+  { category: 'Data Science', icon: Layers, items: ['Python', 'Pandas', 'SQL', 'Exploratory Analysis', 'Statistics'] },
+  { category: 'Machine Learning', icon: Zap, items: ['Scikit-learn', 'Logistic Regression', 'Model Evaluation', 'Jupyter', 'Feature Engineering'] },
+  { category: 'AI & GenAI', icon: Globe, items: ['Generative AI', 'Computer Vision', 'LLMs', 'Prompting', 'Applied NLP'] },
+  { category: 'Build & Viz', icon: Code2, items: ['Dashboards', 'Next.js', 'Matplotlib', 'Git', 'Experiment Tracking'] },
 ];
 
 export default function AboutSection() {
@@ -32,22 +32,22 @@ export default function AboutSection() {
             <FadeInUp className="about-header">
               <span className="about-eyebrow">About</span>
               <h2 className="about-title">
-                Engineering at the<br />
-                <em>intersection of art &amp; code</em>
+                Building at the<br />
+                <em>intersection of data &amp; AI</em>
               </h2>
             </FadeInUp>
 
             <FadeInUp delay={0.1} className="about-bio-text">
               <p>
-                I'm Alaika — a full-stack engineer with 8+ years building products that sit at the edge of performance and aesthetics. My work spans zero-latency canvas engines, distributed cloud backends, and luxury digital interfaces.
+                I'm Alaika Izatul Ilmi — an Informatics student at Universitas Bhamada Slawi focused on Data Science, Machine Learning Engineering, and Generative AI. I build models, analyses, and AI products that turn messy data into decisions.
               </p>
               <p>
-                I believe code should be fast, honest, and beautiful. Whether it's a 60fps interactive character or a globally distributed API, every layer deserves the same rigour.
+                From receipt intelligence for UMKM to air-quality analysis and medical prediction models, I care about work that is rigorous, interpretable, and actually useful.
               </p>
               <div className="about-meta-tags">
-                <span><MapPin size={13} /> Based in Indonesia</span>
-                <span><Calendar size={13} /> 8+ years experience</span>
-                <span><Zap size={13} /> Open to contracts</span>
+                <span><MapPin size={13} /> Tegal, Indonesia</span>
+                <span><Calendar size={13} /> Informatics student</span>
+                <span><Zap size={13} /> Open to internships</span>
               </div>
             </FadeInUp>
 
@@ -57,11 +57,11 @@ export default function AboutSection() {
           <div className="about-card-placeholder">
             <IDCardLanyard
               name="Alaika"
-              role="Full Stack Developer"
+              role="Data Scientist & AI"
               brand="ALAIKA"
-              brandTagline="Full Stack Dev Studio"
-              pillars={["Design", "Code", "Ship"]}
-              location="Indonesia"
+              brandTagline="Data Science Studio"
+              pillars={["Data", "Model", "Insight"]}
+              location="Tegal, ID"
               idNumber="AL-2024"
               validThru="12/2029"
               site="alaika.dev"
@@ -78,10 +78,10 @@ export default function AboutSection() {
         {/* ── Stats + Skills — full width below grid ── */}
         <FadeInUp delay={0.12} className="about-stats-row">
           {[
-            { value: '50+', label: 'Projects shipped' },
-            { value: '12+', label: 'Happy clients' },
-            { value: '60fps', label: 'Target performance' },
-            { value: '0ms', label: 'Tolerance for bloat' },
+            { value: '18+', label: 'Public repositories' },
+            { value: '6+', label: 'ML & AI projects' },
+            { value: 'Python', label: 'Core research stack' },
+            { value: 'GenAI', label: 'Current focus' },
           ].map((s) => (
             <div key={s.label} className="about-stat-card">
               <span className="about-stat-value">{s.value}</span>

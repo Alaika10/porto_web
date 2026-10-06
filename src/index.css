@@ -929,8 +929,8 @@ html, body {
   position: relative;
   width: 100%;
   background: #eceeee;
-  padding: 7rem 0 8rem;
-  overflow: hidden;
+  padding: 7rem 0 5.5rem;
+  overflow: visible;
   border-top: 1px solid rgba(0,0,0,0.06);
 }
 
@@ -943,7 +943,7 @@ html, body {
 }
 
 .experience-header {
-  margin-bottom: 4rem;
+  margin-bottom: 3.25rem;
 }
 
 .experience-period {
@@ -955,12 +955,25 @@ html, body {
   color: var(--text-muted);
 }
 
-/* 3 cards left + stats column right */
-.experience-grid {
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.experience-row {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 200px;
+  grid-template-columns: 160px 1fr;
   gap: 1.5rem;
   align-items: start;
+}
+
+.experience-row-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding-top: 1.65rem;
 }
 
 .experience-card {
@@ -974,17 +987,15 @@ html, body {
 }
 
 .experience-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.09);
 }
 
-/* Featured card — slightly elevated */
 .experience-card--featured {
   background: rgba(17,20,24,0.93);
   border-color: rgba(255,255,255,0.08);
 }
 
-.experience-card--featured .experience-year,
 .experience-card--featured .experience-role,
 .experience-card--featured .experience-company,
 .experience-card--featured .experience-desc {
@@ -1006,17 +1017,10 @@ html, body {
 }
 
 .experience-card-inner {
-  padding: 1.8rem;
+  padding: 1.65rem 1.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
-}
-
-.experience-meta {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-bottom: 0.2rem;
+  gap: 0.45rem;
 }
 
 .experience-year {
@@ -1040,7 +1044,7 @@ html, body {
 }
 
 .experience-role {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #111418;
   letter-spacing: -0.01em;
@@ -1056,7 +1060,7 @@ html, body {
 }
 
 .experience-desc {
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   color: #4b5563;
   margin: 0.25rem 0 0;
@@ -1080,29 +1084,30 @@ html, body {
   border: 1px solid rgba(0,0,0,0.08);
 }
 
-/* Stats column */
 .experience-stats-col {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
   gap: 0;
+  margin-top: 2rem;
   background: rgba(255,255,255,0.55);
   border: 1px solid rgba(0,0,0,0.06);
   border-radius: 20px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  padding: 1.6rem 1.4rem;
-  align-self: stretch;
+  padding: 0.4rem 0.4rem;
 }
 
 .experience-stat-item {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
-  padding: 1rem 0;
+  gap: 0.25rem;
+  padding: 1.15rem 1.2rem;
 }
 
 .experience-stat-num {
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: #0d1117;
   letter-spacing: -0.03em;
@@ -1118,37 +1123,33 @@ html, body {
 }
 
 .experience-divider {
-  height: 1px;
+  width: 1px;
   background: rgba(0,0,0,0.07);
-  width: 100%;
+  align-self: stretch;
+  margin: 0.85rem 0;
 }
 
-@media (max-width: 1024px) {
-  .experience-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-  .experience-stats-col {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0;
-  }
-  .experience-stat-item {
-    flex: 1;
-    min-width: 120px;
-    padding: 0.8rem 1rem;
-  }
-  .experience-divider {
-    display: none;
-  }
-}
-
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   .experience-container {
     padding: 0 1.5rem;
   }
-  .experience-grid {
+  .experience-row {
     grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+  .experience-row-meta {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 0;
+  }
+  .experience-stats-col {
+    flex-wrap: wrap;
+  }
+  .experience-stat-item {
+    min-width: 140px;
+  }
+  .experience-divider {
+    display: none;
   }
 }
 
@@ -1830,39 +1831,66 @@ html, body {
   max-width: 900px;
 }
 
-/* ?? WAVE QUOTE DIVIDER ??????????????????????????????????????????????????? */
+.wave-path {
+  position: relative;
+  width: 100%;
+}
+
+.wave-path-svg {
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: -350px;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.wave-path-hit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -60px;
+  height: 120px;
+  cursor: crosshair;
+  z-index: 10;
+}
+
+.wave-path--compact {
+  height: 72px;
+}
+
+.wave-path--compact .wave-path-svg {
+  height: 240px;
+  top: -84px;
+}
+
+.wave-path--compact .wave-path-hit {
+  top: 0;
+  height: 72px;
+}
+
 .wave-quote-divider {
   position: relative;
   width: 100%;
-  background: #eceeee;
-  padding: 4rem 0 5rem;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: 2.75rem;
+  padding: 0;
   overflow: visible;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.wave-quote-line {
-  width: 70%;
-  max-width: 900px;
-  position: relative;
-  z-index: 2;
+.wave-quote-cluster {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .wave-quote-content {
-  width: 70%;
-  max-width: 900px;
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 2rem;
-}
-
-.wave-quote-text-wrap {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 0.6rem;
+  gap: 0.4rem;
+  position: relative;
+  z-index: 2;
 }
 
 .wave-quote-attribution {
@@ -1874,20 +1902,17 @@ html, body {
 }
 
 .wave-quote-body {
-  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-size: clamp(1.35rem, 2.6vw, 2.05rem);
   font-weight: 700;
   line-height: 1.35;
   color: #0d1117;
   text-align: right;
-  max-width: 600px;
+  max-width: 620px;
   letter-spacing: -0.01em;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .wave-quote-line,
-  .wave-quote-content {
-    width: 88%;
-  }
   .wave-quote-body {
     font-size: 1.25rem;
   }
