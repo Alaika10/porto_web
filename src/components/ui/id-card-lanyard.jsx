@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const CSS = `
 .idcl-root{
@@ -699,7 +700,7 @@ export function IDCardLanyard({
               </div>
               <div className="idcl-photo">
                 {photoUrl ? (
-                  <img src={photoUrl} alt={name} />
+                  <Image src={photoUrl} alt={name} fill style={{ objectFit: "cover", objectPosition: "center top" }} />
                 ) : (
                   <svg viewBox="0 0 182 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
                     <defs>

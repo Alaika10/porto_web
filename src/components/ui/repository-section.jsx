@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
-import ContributionSkyline from '@/components/ui/contribution-skyline';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
+
+const ContributionSkyline = dynamic(
+  () => import('@/components/ui/contribution-skyline'),
+  { ssr: false, loading: () => <div style={{ height: '300px' }} /> }
+);
 import { 
   FolderGit2, 
   Star, 
@@ -180,10 +186,12 @@ export function RepositorySection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="group p-4 rounded-2xl bg-white/80 hover:bg-white border border-black/[0.08] hover:border-black/20 shadow-sm hover:shadow-md transition-all flex items-center gap-4 max-w-sm"
           >
-            <img
+            <Image
               src={`https://avatars.githubusercontent.com/u/128287471?v=4`}
               alt={GITHUB_USERNAME}
-              className="w-12 h-12 rounded-full border border-black/10 object-cover"
+              width={48}
+              height={48}
+              className="rounded-full border border-black/10 object-cover"
             />
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-1.5 font-bold text-sm text-[#0d1117]">

@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -76,8 +78,8 @@ export function ProjectsSection() {
               <span className="proj-num">{p.num}</span>
 
               {/* Thumb */}
-              <div className="proj-thumb">
-                <img src={p.image} alt={p.title} loading="lazy" />
+              <div className="proj-thumb" style={{ position: 'relative' }}>
+                <Image src={p.image} alt={p.title} fill style={{ objectFit: 'cover' }} />
               </div>
 
               {/* Main content */}

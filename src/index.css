@@ -1829,3 +1829,66 @@ html, body {
   width: 70%;
   max-width: 900px;
 }
+
+/* ?? WAVE QUOTE DIVIDER ??????????????????????????????????????????????????? */
+.wave-quote-divider {
+  position: relative;
+  width: 100%;
+  background: #eceeee;
+  padding: 4rem 0 5rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wave-quote-line {
+  width: 70%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+.wave-quote-content {
+  width: 70%;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+.wave-quote-text-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.wave-quote-attribution {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.wave-quote-body {
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.35;
+  color: #0d1117;
+  text-align: right;
+  max-width: 600px;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .wave-quote-line,
+  .wave-quote-content {
+    width: 88%;
+  }
+  .wave-quote-body {
+    font-size: 1.25rem;
+  }
+}

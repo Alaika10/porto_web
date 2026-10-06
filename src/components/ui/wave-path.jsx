@@ -3,89 +3,95 @@
 import React, { useRef, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
-export function WavePath({ className, color = 'currentColor', strokeWidth = 1.5, ...props }) {
-  const path = useRef(null);
-  let progress = 0;
-  let x = 0.5;
-  let time = Math.PI / 2;
-  let reqId = null;
+export function WavePath({ className, color = 'currentColor', strokeWidth = 3, ...props }) {
+  const containerRef = useRef(null);
+  const pathRef = useRef(null);
+  const progressRef = useRef(0);
+  const xRef = useRef(0.5);
+  const timeRef = useRef(Math.PI / 2);
+  const reqIdRef = useRef(null);
 
-  useEffect(() => {
-    setPath(progress);
-    const handleResize = () => setPath(progress);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  const Y_MID = 250;
+
+  const getWidth = () =>
+    containerRef.current ? containerRef.current.offsetWidth : window.innerWidth;
 
   const setPath = (prog) => {
-    const width = window.innerWidth * 0.7;
-    if (path.current) {
-      path.current.setAttributeNS(
-        null,
-        'd',
-        `M0 100 Q${width * x} ${100 + prog * 2.2}, ${width} 100`,
+    const w = getWidth();
+    if (pathRef.current) {
+      const cpX = w * xRef.current;
+      const cpY = Y_MID + prog;
+      pathRef.current.setAttributeNS(
+        null, 'd',
+        `M 0 ${Y_MID} Q ${cpX} ${cpY} ${w} ${Y_MID}`
       );
     }
   };
 
+  useEffect(() => {
+    setPath(0);
+    const handleResize = () => setPath(progressRef.current);
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      if (reqIdRef.current) cancelAnimationFrame(reqIdRef.current);
+    };
+  }, []);
+
   const lerp = (a, b, t) => a * (1 - t) + b * t;
 
   const manageMouseEnter = () => {
-    if (reqId) {
-      cancelAnimationFrame(reqId);
-      resetAnimation();
+    if (reqIdRef.current) {
+      cancelAnimationFrame(reqIdRef.current);
+      reqIdRef.current = null;
     }
+    timeRef.current = Math.PI / 2;
   };
 
   const manageMouseMove = (e) => {
     const { movementY, clientX } = e;
-    if (path.current) {
-      const bound = path.current.getBoundingClientRect();
-      x = (clientX - bound.left) / bound.width;
-      progress += movementY;
-      setPath(progress);
+    if (containerRef.current) {
+      const rect = containerRef.current.getBoundingClientRect();
+      xRef.current = (clientX - rect.left) / rect.width;
     }
+    progressRef.current += movementY * 3;
+    setPath(progressRef.current);
   };
 
-  const manageMouseLeave = () => {
-    animateOut();
-  };
+  const manageMouseLeave = () => { animateOut(); };
 
   const animateOut = () => {
-    const newProgress = progress * Math.sin(time);
-    progress = lerp(progress, 0, 0.018);
-    time += 0.15;
+    const newProgress = progressRef.current * Math.sin(timeRef.current);
+    progressRef.current = lerp(progressRef.current, 0, 0.025);
+    timeRef.current += 0.2;
     setPath(newProgress);
-    if (Math.abs(progress) > 0.5) {
-      reqId = requestAnimationFrame(animateOut);
+    if (Math.abs(progressRef.current) > 0.75) {
+      reqIdRef.current = requestAnimationFrame(animateOut);
     } else {
-      resetAnimation();
+      timeRef.current = Math.PI / 2;
+      progressRef.current = 0;
+      setPath(0);
+      reqIdRef.current = null;
     }
-  };
-
-  const resetAnimation = () => {
-    time = Math.PI / 2;
-    progress = 0;
   };
 
   return (
-    <div className={cn('relative h-px w-full', className)} {...props}>
+    <div ref={containerRef} className={cn('relative w-full', className)} {...props}>
       <div
         onMouseEnter={manageMouseEnter}
         onMouseMove={manageMouseMove}
         onMouseLeave={manageMouseLeave}
-        className="relative z-10 w-full"
-        style={{ cursor: 'crosshair', top: '-30px', height: '80px' }}
+        style={{ position: 'absolute', left: 0, right: 0, top: '-60px', height: '120px', cursor: 'crosshair', zIndex: 10 }}
       />
       <svg
-        className="absolute w-full pointer-events-none"
-        style={{ top: '-180px', height: '460px' }}
+        style={{ position: 'absolute', width: '100%', height: '700px', top: '-350px', pointerEvents: 'none', overflow: 'visible' }}
       >
         <path
-          ref={path}
+          ref={pathRef}
           fill="none"
           stroke={color}
           strokeWidth={strokeWidth}
+          strokeLinecap="round"
         />
       </svg>
     </div>
