@@ -1,5 +1,4 @@
 'use client';
-"use client";
 
 import { FadeInUp } from '@/components/ui/fade-in-up';
 import { StaggerTestimonials } from '@/components/ui/stagger-testimonials';

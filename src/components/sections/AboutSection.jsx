@@ -1,5 +1,4 @@
 'use client';
-"use client";
 
 import { Layers, Zap, Globe, Code2, MapPin, Calendar } from 'lucide-react';
 import dynamic from 'next/dynamic';

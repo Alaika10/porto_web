@@ -58,7 +58,7 @@ const personSchema = {
   url: SITE_URL,
   sameAs: [
     'https://github.com/Alaika10',
-    'https://www.linkedin.com/in/alaika',
+    'https://www.linkedin.com/in/alaika10',
   ],
   knowsAbout: [
     'Python',

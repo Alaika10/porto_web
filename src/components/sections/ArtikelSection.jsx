@@ -1,5 +1,4 @@
 'use client';
-"use client";
 
 import { motion } from 'motion/react';
 import { BlogPostCard } from '@/components/ui/card-18';

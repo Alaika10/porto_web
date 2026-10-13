@@ -68,12 +68,10 @@ export default function HeroSection() {
       setLoadingProgress(pct);
       if (loadedCount >= totalToLoad) {
         framesRef.current = framesArray;
-        setTimeout(() => {
-          if (isMounted) {
-            setIsLoaded(true);
-            startTimeRef.current = performance.now();
-          }
-        }, 300);
+        if (isMounted) {
+          setIsLoaded(true);
+          startTimeRef.current = performance.now();
+        }
       }
     };
 
